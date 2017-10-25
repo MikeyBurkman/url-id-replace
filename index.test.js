@@ -90,3 +90,9 @@ describe('#getBuiltInMatchers', () => {
         expect(sut.getBuiltInMatchers().digits).toBeInstanceOf(RegExp); // Should be unchanged
     });
 });
+
+it('Should throw an error if an unknown option is passed', () => {
+    expect(() => sut({
+        something: true
+    })).toThrowError();
+});

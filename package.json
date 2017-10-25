@@ -24,5 +24,8 @@
   "homepage": "https://github.com/MikeyBurkman/url-id-replace#readme",
   "devDependencies": {
     "jest": "^21.2.1"
+  },
+  "jest": {
+    "collectCoverage": true
   }
 }
