@@ -50,6 +50,20 @@ describe('#custom matchers', () => {
         expect(parse('/url/DEADBEEF/abc')).toEqual('/url/DEADBEEF/abc');
     });
 
+    it('Should test ISO8061 timestamp strings', () => {
+        const parse = sut({
+            matchers: [sut.getBuiltInMatchers().iso8061]
+        });
+
+        expect(parse('/url')).toEqual('/url');
+        expect(parse('/url/2015/abc')).toEqual('/url/*/abc');
+        expect(parse('/url/2015-06/abc')).toEqual('/url/*/abc');
+        expect(parse('/url/2015-06-01/abc')).toEqual('/url/*/abc');
+        expect(parse('/url/2015-06-01T12:00:00Z/abc')).toEqual('/url/*/abc');
+        expect(parse('/url/2015-06-01T12:00:00-04:00/abc')).toEqual('/url/*/abc');
+        expect(parse('/url/2015-06-01T12:00:00.000+04:00/abc')).toEqual('/url/*/abc');
+    });
+
     it('Should test an arbitrary regex', () => {
         const parse = require('url-id-replace')({
             matchers: [/^ITEM-\d*$/]
