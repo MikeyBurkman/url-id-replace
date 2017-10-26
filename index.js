@@ -5,7 +5,8 @@ const getBuiltInMatchers = () => ({
     uuid: /^[\da-f]{8}\-[\da-f]{4}\-[\da-f]{4}\-[\da-f]{4}\-[\da-f]{12}$/i,
     hexLowercase: /^[\da-f]{7,}$/,
     hexUppercase: /^[\dA-F]{7,}$/,
-    iso8061: /^\d{4}(-\d\d(-\d\d(T\d\d:\d\d(:\d\d)?(\.\d+)?(([+-]\d\d:\d\d)|Z)?)?)?)?$/
+    iso8061: /^\d{4}(?:-\d\d(?:-\d\d(?:T\d\d:\d\d(?::\d\d)?(?:\.\d+)?(?:(?:[+-]\d\d:\d\d)|Z)?)?)?)?$/
+    // iso8061: /^\d{4}(-\d\d(-\d\d(T\d\d:\d\d(:\d\d)?(\.\d+)?(([+-]\d\d:\d\d)|Z)?)?)?)?$/
 });
 
 const getDefaultMatchers = () => {
