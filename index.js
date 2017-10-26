@@ -6,7 +6,6 @@ const getBuiltInMatchers = () => ({
     hexLowercase: /^[\da-f]{7,}$/,
     hexUppercase: /^[\dA-F]{7,}$/,
     iso8061: /^\d{4}(?:-\d\d(?:-\d\d(?:T\d\d:\d\d(?::\d\d)?(?:\.\d+)?(?:(?:[+-]\d\d:\d\d)|Z)?)?)?)?$/
-    // iso8061: /^\d{4}(-\d\d(-\d\d(T\d\d:\d\d(:\d\d)?(\.\d+)?(([+-]\d\d:\d\d)|Z)?)?)?)?$/
 });
 
 const getDefaultMatchers = () => {
