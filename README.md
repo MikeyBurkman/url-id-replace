@@ -15,11 +15,11 @@ A few common matchers are already provided:
 const builtInMatchers = urlIdReplace.getBuiltInMatchers();
 // Returns an object that looks like this:
 {
-    digits: /^\d+$/,
-    uuid: /^[\da-f]{8}\-[\da-f]{4}\-[\da-f]{4}\-[\da-f]{4}\-[\da-f]{12}$/i,
-    hexLowercase: /^[\da-f]{7,}$/,
-    hexUppercase: /^[\dA-F]{7,}$/,
-    iso8061: /^\d{4}(-\d\d(-\d\d(T\d\d:\d\d(:\d\d)?(\.\d+)?(([+-]\d\d:\d\d)|Z)?)?)?)?$/
+    digits: ..., // Regex for matching only digits
+    uuid: .., // Regex for matching only UUIDs
+    hexLowercase: ..., // Regex for matching only lowercase hex values that are at least 7 characters
+    hexUppercase: ..., // Regex for matching only uppercase hex values that are at least 7 chracters
+    iso8061: ... // Regex for matching ISO8061 timestamp values
 }
 ```
 Currently, only `digits` and `uuid` are included in the list of default matchers. (IE: if you use

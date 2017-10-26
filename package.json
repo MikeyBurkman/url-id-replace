@@ -1,6 +1,6 @@
 {
   "name": "url-id-replace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Used for replacing parts of a path that look like IDs",
   "main": "index.js",
   "scripts": {
