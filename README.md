@@ -25,6 +25,9 @@ const urlIdReplace = require('url-id-replace');
 const parse = urlIdReplace({
     matchers: urlIdReplace.getDefaultMatchers().concat(/^ITEM-\d*$/)
 });
+console.log(parse('/items/ITEM-12345/location')); // /items/*/location
+console.log(parse('/items/123')); // items/*
+
 ```
 
 ### Built-in Matchers
@@ -38,4 +41,13 @@ const builtInMatchers = urlIdReplace.getBuiltInMatchers();
     hexLowercase: /^[\da-f]{7,}$/,
     hexUppercase: /^[\dA-F]{7,}$/
 }
+```
+
+### Changing the Placeholder
+Instead of `*`, you can specify any string you want to be used for matches:
+```js
+const parse = require('url-id-replace')({
+    placeholder: 'X'
+});
+console.log(parse('/items/123/location/')); // items/X/location/
 ```
