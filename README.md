@@ -1,5 +1,5 @@
 # url-id-replace
-Replace things like IDs and other regexes in a URL path with a placeholder
+Replace things like IDs and other regexes in a URL path with a placeholder.
 
 ### Sample Usage
 ```js
@@ -27,7 +27,7 @@ the default parameters when building the parser.) The others are provided for yo
 you need them. Simply follow the next step for adding custom matchers.
 
 ### Custom Matchers
-Custom matchers are regexes that can be specified when the parser is created
+Custom matchers are regexes that can be specified when the parser is created.
 ```js
 const parse = require('url-id-replace')({
     matchers: [/^ITEM-\d*$/]
