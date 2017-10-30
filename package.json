@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/MikeyBurkman/url-id-replace/issues"
   },
-  "homepage": "https://github.com/MikeyBurkman/url-id-replace#readme",
+  "homepage": "https://github.com/MikeyBurkman/url-id-replace",
   "devDependencies": {
     "jest": "^21.2.1"
   },
